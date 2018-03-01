@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="177.0" prefWidth="534.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DeployController">
+   <children>
+      <TabPane fx:id="tabPane" layoutX="41.0" layoutY="74.0" prefHeight="392.0" prefWidth="534.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab text="Deploy WPS">
+            <content>
+              <AnchorPane fx:id="anchorPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnProject" layoutX="36.0" layoutY="34.0" mnemonicParsing="false" onAction="#getProjectPath" text="Java Project" />
+                        <TextField fx:id="inputProjectPath" layoutX="141.0" layoutY="34.0" prefHeight="25.0" prefWidth="287.0" />
+                        <Button fx:id="btnDeploWps" layoutX="99.0" layoutY="94.0" mnemonicParsing="false" onAction="#deployWps" prefHeight="25.0" prefWidth="131.0" text="Deploy &amp; Run" />
+                        <Button fx:id="btnShutdown" layoutX="276.0" layoutY="94.0" mnemonicParsing="false" onAction="#shutdown" prefWidth="131.0" text="Shutdown" />
+                        <Label fx:id="labelMessing" layoutX="445.0" layoutY="156.0" opacity="0.57" prefHeight="222.0" prefWidth="534.0" style="-fx-background-color: #000;" text="        Select a path to geoserver / bin" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Parameter">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="11.0" layoutY="28.0" text="GeoServer bin location">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="189.0" layoutY="39.0" prefHeight="10.0" prefWidth="340.0" />
+                        <Button fx:id="btnChoosePathGeoServer" layoutX="56.0" layoutY="72.0" mnemonicParsing="false" onAction="#getChoosePathGeoServer" text="Choose geoserver path" />
+                        <TextField fx:id="inputGeoServerPath" layoutX="206.0" layoutY="72.0" prefHeight="25.0" prefWidth="298.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
